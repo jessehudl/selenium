@@ -54,7 +54,7 @@ def release_version
 end
 
 def version
-  "#{release_version}.0"
+  "#{release_version}.0-hudl"
 end
 
 ide_version = "2.8.0"

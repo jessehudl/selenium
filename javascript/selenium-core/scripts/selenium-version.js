@@ -16,6 +16,6 @@
 // under the License.
 
 Selenium.version = "2.53";
-Selenium.revision = ".0";
+Selenium.revision = ".0-hudl";
 
 window.top.document.title += " v" + Selenium.version + Selenium.revision;

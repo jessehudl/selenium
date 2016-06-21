@@ -1,3 +1,8 @@
+v2.53.0-hudl
+=======
+
+Custom version for internal use at Hudl to allow browser sessions on remote Grid nodes to be cleaned up if the client has been killed (usually by TeamCity).
+
 v2.53.0
 =======
 
