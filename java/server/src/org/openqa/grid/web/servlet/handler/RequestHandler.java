@@ -129,9 +129,9 @@ public class RequestHandler implements Comparable<RequestHandler> {
         try {
           forwardRequest(session, this);
         } catch (ClientGoneException e) {
-          log.log(Level.WARNING, "The client is gone for session " + session);
+          log.log(Level.WARNING, "The client is gone for session " + session + " between " + session.getSlot().getRemoteURL() + " and " + request.getRemoteAddr());
         } catch (SocketTimeoutException e){
-          log.log(Level.SEVERE, "Socket timed out for session " + session + ", " + e.getMessage());
+          log.log(Level.SEVERE, "Socket timed out for session " + session  + " between " + session.getSlot().getRemoteURL() + " and " + request.getRemoteAddr() + ", " + e.getMessage());
         } catch (Throwable t) {
           log.log(Level.SEVERE, "cannot forward the request " + t.getMessage(), t);
           registry.terminate(session, SessionTerminationReason.FORWARDING_TO_NODE_FAILED);
